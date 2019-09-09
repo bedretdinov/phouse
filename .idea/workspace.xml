@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="492fba49-bfba-4aeb-9e05-d9b1b4e730eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/phouse/phouse.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/phouse/phouse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +22,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phouse/phouse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="30">
               <caret line="5" column="58" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="58" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -33,12 +34,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <first_editor relative-caret-position="789">
+                <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
               </first_editor>
               <second_editor />
             </state>
@@ -46,6 +47,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>clickhouse</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,6 +63,7 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/phouse/phouse.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/build/lib/phouse/phouse.py" />
       </list>
     </option>
   </component>
@@ -119,16 +126,15 @@
       <option name="presentableId" value="Default" />
       <updated>1560262788447</updated>
       <workItem from="1560262789651" duration="1069000" />
-      <workItem from="1568023674138" duration="2779000" />
+      <workItem from="1568023674138" duration="3614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3848000" />
+    <option name="totallyTimeSpent" value="4683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="2560" height="1442" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18138425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -175,23 +181,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="789">
+            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phouse/phouse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="30">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="58" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

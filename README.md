@@ -34,5 +34,30 @@ df.clickhouse.append(table='new_table') # The table is created automatically
 df.clickhouse.write(table='new_table') # The table is created automatically 
 
 
+
+
+
+
+# write by package
+
+from sklearn import datasets 
+
+iris = datasets.load_iris() 
+
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['date'] = pd.to_datetime('today')
+
+first = True
+buffer_size = 10
+for i in range(0,df.shape[0],buffer_size):
+    item = df[i:i+buffer_size]  
+    if(first):
+        item.clickhouse.write(table='iris_test')
+        first = not first 
+    else:
+        item.clickhouse.append(table='iris_test')
+
+
+
 ```
  
