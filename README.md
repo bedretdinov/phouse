@@ -1,9 +1,15 @@
 # Phouse easy work with clickhouse 
 
+
+https://github.com/bedretdinov/phouse  
+https://pypi.org/project/phouse/
+
 # for install
 ```python
 pip3 install phouse
 ```
+
+
 
 # Examples
 ```python
