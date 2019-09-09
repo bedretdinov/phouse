@@ -3,10 +3,10 @@ from clickhouse_driver import Client
 import sys
 import time
 
-@pd.api.extensions.register_dataframe_accessor("clichouse")
+@pd.api.extensions.register_dataframe_accessor("clickhouse")
 class Clickhouse:
     
-    DATE_COLUMN = None 
+    DATE_COLUMN = None
     COLUMN_LIST = None
     DATA_FRAME  = None
     MAPPING = {
