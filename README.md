@@ -34,10 +34,6 @@ df.clickhouse.append(table='new_table') # The table is created automatically
 df.clickhouse.write(table='new_table') # The table is created automatically 
 
 
-
-
-
-
 # write by package
 
 from sklearn import datasets 
@@ -57,7 +53,4 @@ for i in range(0,df.shape[0],buffer_size):
     else:
         item.clickhouse.append(table='iris_test')
 
-
-
 ```
- 
