@@ -1,9 +1,8 @@
 # Phouse easy work with clickhouse 
 
-# for install use
+# for install
 ```python
-pip3 install git+git://github.com/bedretdinov/phouse.git
-
+pip3 install phouse
 ```
 
 # Examples

@@ -1,5 +1,11 @@
 README.md
 setup.py
+.idea/encodings.xml
+.idea/heat_map-master.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
 phouse/__init__.py
 phouse/phouse.py
 phouse.egg-info/PKG-INFO
