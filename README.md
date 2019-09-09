@@ -1,5 +1,12 @@
 # Phouse easy work with clickhouse 
 
+# for install use
+```python
+pip3 install git+git://github.com/bedretdinov/phouse.git
+
+```
+
+# Examples
 ```python
 
 from phouse.phouse import Phouse 
