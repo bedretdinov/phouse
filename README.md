@@ -28,10 +28,10 @@ df = pd.clickhouse_query(''' SELECT database, name FROM system.tables ''')
 df['date'] = pd.to_datetime('today')
 
 # insert to the table
-df.append(table='new_table')
+df.append(table='new_table') # The table is created automatically
 
 # truncate table and insert
-df.write(table='new_table')
+df.write(table='new_table') # The table is created automatically 
 
 
 ```
