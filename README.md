@@ -6,7 +6,7 @@ https://pypi.org/project/phouse/
 
 # for install
 ```python
-pip3 install phouse
+pip3 install git+https://github.com/bedretdinov/phouse
 ```
 
 
