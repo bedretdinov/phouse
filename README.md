@@ -2,7 +2,6 @@
 
 
 https://github.com/bedretdinov/phouse  
-https://pypi.org/project/phouse/
 
 # for install
 ```python
