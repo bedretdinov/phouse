@@ -8,10 +8,15 @@ Author-email: php-job@mail.ru
 License: UNKNOWN
 Description: # Phouse easy work with clickhouse 
         
+        
+        https://github.com/bedretdinov/phouse  
+        
         # for install
         ```python
-        pip3 install phouse
+        pip3 install git+https://github.com/bedretdinov/phouse
         ```
+        
+        
         
         # Examples
         ```python
@@ -41,10 +46,6 @@ Description: # Phouse easy work with clickhouse
         df.clickhouse.write(table='new_table') # The table is created automatically 
         
         
-        
-        
-        
-        
         # write by package
         
         from sklearn import datasets 
@@ -63,11 +64,105 @@ Description: # Phouse easy work with clickhouse
                 first = not first 
             else:
                 item.clickhouse.append(table='iris_test')
+                
+                
+                
+                
+                
+        # How to create engine and partition
         
         
+        
+            # VersionedCollapsingMergeTree 
+            
+            df = pd.DataFrame([
+                ['Y',0.4,1, 56],
+                ['N',0.6,-1,34]
+            ], columns=['status','probability','category','party'])
+            
+            
+            df.clickhouse.drop(table='test333')
+            
+            df.clickhouse.VersionedCollapsingMergeTree(
+                SIGN = 'category',
+                VERSION = 'party',
+                PARTITION = 'status', 
+                ORDER_BY = 'status',
+                INDEX_GRANULARITY = 8192
+            ) 
+            
+            df.clickhouse.append(table='test333')     
+                
+        # __________________________________________________________________
+        
+            # CollapsingMergeTree
+            
+            df = pd.DataFrame([
+                ['Y',0.4,1],
+                ['N',0.6,-1]
+            ], columns=['status','probability','category'])
+            
+            
+            df.clickhouse.drop(table='test333')
+            
+            df.clickhouse.CollapsingMergeTree(
+                SIGN = 'category',
+                PARTITION = 'status', 
+                ORDER_BY = 'status',
+                INDEX_GRANULARITY = 8192
+            ) 
+            
+            df.clickhouse.append(table='test333')
+            
+        # __________________________________________________________________
+        
+            # CollapsingMergeTree
+        
+            df = pd.DataFrame([
+                ['Y',0.4,1],
+                ['N',0.6,-1]
+            ], columns=['status','probability','category'])
+            
+            
+            df.clickhouse.drop(table='test333')
+            
+            df.clickhouse.CollapsingMergeTree(
+                SIGN = 'category',
+                PARTITION = 'status', 
+                ORDER_BY = 'status',
+                INDEX_GRANULARITY = 8192
+            ) 
+            
+            df.clickhouse.append(table='test333')
+            
+        # __________________________________________________________________
+            
+            # AggregatingMergeTree
+            
+            
+            df = pd.DataFrame([
+                ['Y',0.4,56],
+                ['N',0.6,23]
+            ], columns=['status','probability','category'])
+            
+            
+            df.clickhouse.drop(table='test333')
+            
+            df.clickhouse.AggregatingMergeTree(
+                PARTITION = 'status', 
+                ORDER_BY = 'status',
+                INDEX_GRANULARITY = 8192
+            ) 
+            
+            df.clickhouse.append(table='test333')
+            
+        # __________________________________________________________________
+        
+            # Clean table
+            df.clickhouse.truncate(table='test333')
+            
         
         ```
-         
         
 Platform: UNKNOWN
 Description-Content-Type: text/markdown

@@ -56,5 +56,102 @@ for i in range(0,df.shape[0],buffer_size):
         first = not first 
     else:
         item.clickhouse.append(table='iris_test')
+        
+        
+        
+        
+        
+# How to create engine and partition
+
+
+
+    # VersionedCollapsingMergeTree 
+    
+    df = pd.DataFrame([
+        ['Y',0.4,1, 56],
+        ['N',0.6,-1,34]
+    ], columns=['status','probability','category','party'])
+    
+    
+    df.clickhouse.drop(table='test333')
+    
+    df.clickhouse.VersionedCollapsingMergeTree(
+        SIGN = 'category',
+        VERSION = 'party',
+        PARTITION = 'status', 
+        ORDER_BY = 'status',
+        INDEX_GRANULARITY = 8192
+    ) 
+    
+    df.clickhouse.append(table='test333')     
+        
+# __________________________________________________________________
+
+    # CollapsingMergeTree
+    
+    df = pd.DataFrame([
+        ['Y',0.4,1],
+        ['N',0.6,-1]
+    ], columns=['status','probability','category'])
+    
+    
+    df.clickhouse.drop(table='test333')
+    
+    df.clickhouse.CollapsingMergeTree(
+        SIGN = 'category',
+        PARTITION = 'status', 
+        ORDER_BY = 'status',
+        INDEX_GRANULARITY = 8192
+    ) 
+    
+    df.clickhouse.append(table='test333')
+    
+# __________________________________________________________________
+
+    # CollapsingMergeTree
+
+    df = pd.DataFrame([
+        ['Y',0.4,1],
+        ['N',0.6,-1]
+    ], columns=['status','probability','category'])
+    
+    
+    df.clickhouse.drop(table='test333')
+    
+    df.clickhouse.CollapsingMergeTree(
+        SIGN = 'category',
+        PARTITION = 'status', 
+        ORDER_BY = 'status',
+        INDEX_GRANULARITY = 8192
+    ) 
+    
+    df.clickhouse.append(table='test333')
+    
+# __________________________________________________________________
+    
+    # AggregatingMergeTree
+    
+    
+    df = pd.DataFrame([
+        ['Y',0.4,56],
+        ['N',0.6,23]
+    ], columns=['status','probability','category'])
+    
+    
+    df.clickhouse.drop(table='test333')
+    
+    df.clickhouse.AggregatingMergeTree(
+        PARTITION = 'status', 
+        ORDER_BY = 'status',
+        INDEX_GRANULARITY = 8192
+    ) 
+    
+    df.clickhouse.append(table='test333')
+    
+# __________________________________________________________________
+
+    # Clean table
+    df.clickhouse.truncate(table='test333')
+    
 
 ```
