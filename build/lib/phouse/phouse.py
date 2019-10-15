@@ -294,6 +294,7 @@ class Phouse():
         pd.clickhouse_client = Client(options['host'],
                                       user=options['user'],
                                       password=options['password'],
+                                      port=options['port'],
                                       secure=False,
                                       verify=False,
                                       database=options['database'],
