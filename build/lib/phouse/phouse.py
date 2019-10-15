@@ -291,6 +291,10 @@ class Phouse():
     @classmethod
     def getConnection(cls, options, ):
         import pandas as pd
+
+        if('port' not in options):
+            options['port'] = 8123
+
         pd.clickhouse_client = Client(options['host'],
                                       user=options['user'],
                                       password=options['password'],

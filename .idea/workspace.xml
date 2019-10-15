@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/lib/phouse/phouse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="636" column="17" selection-start-line="636" selection-start-column="17" selection-end-line="636" selection-end-column="17" />
+            <state relative-caret-position="157">
+              <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -182,12 +182,12 @@
       <workItem from="1568023674138" duration="4347000" />
       <workItem from="1568030925216" duration="2300000" />
       <workItem from="1568624517042" duration="9679000" />
-      <workItem from="1571153373073" duration="2951000" />
+      <workItem from="1571153373073" duration="3294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20346000" />
+    <option name="totallyTimeSpent" value="20689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="258" width="2550" height="1080" extended-state="0" />
@@ -259,8 +259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/lib/phouse/phouse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="636" column="17" selection-start-line="636" selection-start-column="17" selection-end-line="636" selection-end-column="17" />
+        <state relative-caret-position="157">
+          <caret line="295" column="34" selection-start-line="295" selection-start-column="34" selection-end-line="295" selection-end-column="34" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
