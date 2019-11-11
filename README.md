@@ -3,9 +3,9 @@
 
 
 # advantages
-*** fault-tolerance
->> If the base fell
->> the system will execute the request after it is restored
+*** fault-tolerance *** 
+>If the base fell
+>the system will execute the request after it is restored
 
 
 
