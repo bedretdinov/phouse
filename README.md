@@ -1,4 +1,12 @@
-# Phouse easy work with clickhouse 
+# Phouse
+# Easy work with clickhouse for analysts
+
+
+# advantages
+*** fault-tolerance
+>> If the base fell
+>> the system will execute the request after it is restored
+
 
 
 https://github.com/bedretdinov/phouse  
