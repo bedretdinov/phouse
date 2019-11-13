@@ -22,6 +22,7 @@ class Clickhouse:
         'float64': "Float64 default CAST(0, 'Float64')",
         'object': 'String',
         'datetime64[ns]': 'DateTime default today()',
+        'bool': 'String',
     }
 
     def __init__(self, pandas_obj):
@@ -193,6 +194,7 @@ class Clickhouse:
         for c in obj.columns:
             if (str(obj[c].dtype) == 'datetime64[ns]'):
                 cls.DATE_COLUMN = c
+            
             cls.COLUMN_LIST[c] = "\"{0}\" {1}".format(c, cls.MAPPING[str(obj[c].dtype)])
 
     def createTable(self, table):
@@ -224,12 +226,11 @@ class Clickhouse:
                 'engine_code': self.ENGINE_CODE
             })
 
-        self.CREATE_SQL = CREATE_SQL
-
+        self.CREATE_SQL = CREATE_SQL 
         try:
             pd.clickhouse_client.execute(CREATE_SQL, with_column_types=True)
         except Exception as e:
-            print(e)
+            pass
 
 
 
